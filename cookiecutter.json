@@ -1,0 +1,18 @@
+{
+  "maintainer_name": "Simon Billinge",
+  "maintainer_email": "sb2896@columbia.edu",
+  "maintainer_github_username": "sbillinge",
+  "contributors": "Tina Na Narong and members of the Billinge group",
+  "license_holders": "Trustees of UC Santa Barbara",
+  "project_name": "diffpy.clusterrender",
+  "github_username_or_orgname": "diffpy",
+  "github_repo_name": "diffpy.clusterrender",
+  "conda_pypi_package_dist_name": "diffpy.clusterrender",
+  "package_dir_name": "diffpy.clusterrender",
+  "project_short_description": "Package for high throughput 3D rendering of clusters of atoms for visualization and comparison",
+  "project_keywords": "structure, visualization, clusters",
+  "minimum_supported_python_version": "3.11",
+  "maximum_supported_python_version": "3.13",
+  "project_needs_c_code_compiled": "No",
+  "project_has_gui_tests": "No"
+}
