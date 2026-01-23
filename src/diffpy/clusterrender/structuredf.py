@@ -32,6 +32,10 @@ class StructureDF(pd.DataFrame):
         Index of the central atom in the structure.
     """
 
+    @property
+    def _constructor(self):
+        return StructureDF
+
     def __init__(
         self, *args, structure=None, site_index=None, filename=None, **kwargs
     ):
