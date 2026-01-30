@@ -1,4 +1,4 @@
-"""This module defines class StructureDF.
+"""This module defines class ClusterDataFrame.
 
 A local structure or cluster of atoms is represented in a DataFrame
 format.
@@ -9,32 +9,33 @@ import pandas as pd
 # -------------------------
 
 
-class StructureDataFrame(pd.DataFrame):
-    """Define a structure or cluster of atoms in a pandas DataFrame
-    format. Each row corresponds to an atom, and columns represent
+class ClusterDataFrame(pd.DataFrame):
+    """Define a cluster of atoms in a pandas DataFrame format.
+
+    Each row corresponds to an atom, and columns represent
     atomic properties: species, xyz coordinates, and (optionally)
     coordination shells, specifying the central atom (0) and its
     neighboring atoms (1, 2, ...).
 
     Methods
     -------
-    parse_data(structure_input, site_index=0)
+    parse_structure(structure_input, site_index=0)
         Parse structure data from a structure, a file, a dictionary,
-        or a DataFrame into StructureDataFrame.
+        or a DataFrame into ClusterDataFrame.
 
     Attributes
     ----------
     _constructor : property
-        Ensures that DataFrame operations return StructureDataFrame objects.
+        Ensures that DataFrame operations return ClusterDataFrame objects.
     """
 
     @property
     def _constructor(self):
-        return StructureDataFrame
+        return ClusterDataFrame
 
     def __init__(self, structure_input, site_index=0):
-        """Initialize StructureDataFrame from a Structure object, a
-        file, or generic DataFrame arguments.
+        """Initialize ClusterDataFrame from a Structure object, a file,
+        or generic DataFrame arguments.
 
         Parameters
         ----------
@@ -47,4 +48,4 @@ class StructureDataFrame(pd.DataFrame):
             Default is 0.
         """
         # parse and load structure_input
-        self._parse_data(structure_input, site_index)
+        self._parse_structure(structure_input, site_index)
